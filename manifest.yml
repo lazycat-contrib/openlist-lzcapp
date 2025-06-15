@@ -1,27 +1,28 @@
 zc-sdk-version: "0.1"
-name: DeepClaude
+name: OpenList
 package: lazycat.community.app.openlist
-version: 1.0.1
+version: 0.1.0
 description: A new AList Fork to Anti Trust Crisis
 homepage: https://github.com/OpenListTeam/OpenList
 author: OpenListTeam
 application:
-    subdomain: openlist
-    background_task: true
-    public_path:
-        - /
-    routes:
-        - /=http://openlist:5244/
+  subdomain: openlist
+  background_task: true
+  public_path:
+    - /
+  routes:
+    - /=http://openlist:5244/
 services:
-    openlist:
-        image: ghcr.io/openlistteam/openlist:latest
-        environment:
-            - PUID=0
-            - PGID=0
-            - UMASK=022
-            - TZ=UTC
-        binds:
-            - /lzcapp/var/data:/opt/openlist/data
+  openlist:
+    image: registry.lazycat.cloud/czyt/openlistteam/openlist-git:b71d52d42fa56208
+    environment:
+      - PUID=0
+      - PGID=0
+      - UMASK=022
+      - ALIST_ADMIN_PASSWORD=admin
+      - TZ=UTC
+    binds:
+      - /lzcapp/var/data:/opt/openlist/data
 ext_config:
-    enable_document_access: true
-    enable_media_access: true
+  enable_document_access: true
+  enable_media_access: true
