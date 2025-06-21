@@ -1,7 +1,7 @@
 zc-sdk-version: "0.1"
 name: OpenList
 package: lazycat.community.app.openlist
-version: 4.0.1
+version: 4.0.0
 description: A new AList Fork to Anti Trust Crisis
 homepage: https://github.com/OpenListTeam/OpenList
 author: OpenListTeam
@@ -14,7 +14,8 @@ application:
     - /=http://openlist:5244/
 services:
   openlist:
-    image: docker.1ms.run/rtyu234/openlist:v4.0.1-aio
+    # openlistteam/openlist:v4.0.0-aio
+    image: registry.lazycat.cloud/czyt/openlistteam/openlist:d90a5a51268ab27b
     environment:
       - PUID=0
       - PGID=0
