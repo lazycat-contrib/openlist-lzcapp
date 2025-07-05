@@ -1,0 +1,12 @@
+params:
+  - id: openlistinitpass
+    type: string
+    name: "openlist init admin password"
+    description: "the openlist admin password you want to set"
+    default_value: "admin"
+
+locales:
+  zh:
+    openlistinitpass:
+      name: "Openlist初始化管理员密码"
+      description: "您要初始化的Openlist管理员密码"
