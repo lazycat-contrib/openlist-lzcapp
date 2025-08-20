@@ -19,13 +19,12 @@ services:
         image: registry.lazycat.cloud/czyt/openlistteam/openlist:a33dbd16fa8b7b51
         user: root
         environment:
-            - PUID=0
-            - PGID=0
             - UMASK=022
             - OPENLIST_ADMIN_PASSWORD={{.U.openlistinitpass}}
             - TZ=UTC
         binds:
             - /lzcapp/var/data:/opt/openlist/data
+
 ext_config:
     enable_document_access: true
     enable_media_access: true
