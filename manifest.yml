@@ -17,6 +17,7 @@ services:
     openlist:
         # openlistteam/openlist:v4.1.1-lite-aio
         image: registry.lazycat.cloud/czyt/openlistteam/openlist:a33dbd16fa8b7b51
+        user: root
         environment:
             - PUID=0
             - PGID=0
