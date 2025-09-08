@@ -1,22 +1,27 @@
-zc-sdk-version: "0.1"
 name: OpenList
 min_os_version: 1.3.8
 package: lazycat.community.app.openlist
-version: 4.1.1
+version: 4.1.2
 description: A new AList Fork to Anti Trust Crisis
 homepage: https://github.com/OpenListTeam/OpenList
 author: OpenListTeam
 application:
     subdomain: openlist
     background_task: true
+{{if .U.multi_instance}}
+    multi_instance: true
+{{end}}
     public_path:
         - /
-    routes:
-        - /=http://openlist:5244/
+
+    upstreams:
+        - location: /
+          backend: http://openlist:5244/
+
 services:
     openlist:
-        # openlistteam/openlist:v4.1.1-lite-aio
-        image: registry.lazycat.cloud/czyt/openlistteam/openlist:a33dbd16fa8b7b51
+        # openlistteam/openlist:v4.1.2-aio
+        image: registry.lazycat.cloud/czyt/openlistteam/openlist:38fd8f08fb88860a
         user: root
         environment:
             - UMASK=022

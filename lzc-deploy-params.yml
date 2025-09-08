@@ -1,12 +1,22 @@
 params:
-  - id: openlistinitpass
-    type: string
-    name: "openlist init admin password"
-    description: "the openlist admin password you want to set"
-    default_value: "admin"
+    - id: multi_instance
+      type: bool
+      name: "use multi instance"
+      description: "multi instance,user can only see his/her own data"
+      default_value: "false"
+
+    - id: openlistinitpass
+      type: string
+      name: "openlist init admin password"
+      description: "the openlist admin password you want to set"
+      default_value: "admin"
 
 locales:
-  zh:
-    openlistinitpass:
-      name: "Openlist初始化管理员密码"
-      description: "您要初始化的Openlist管理员密码"
+    zh:
+        multi_instance:
+            name: "使用多实例"
+            description: "多实例，用户只能看到自己的数据"
+
+        openlistinitpass:
+            name: "Openlist初始化管理员密码"
+            description: "您要初始化的Openlist管理员密码"
