@@ -33,3 +33,14 @@ services:
 ext_config:
     enable_document_access: true
     enable_media_access: true
+
+locales:
+    zh:
+        name: "OpenList"
+        description: "反垄断危机的新AList分支"
+    zh_CN:
+        name: "OpenList"
+        description: "反垄断危机的新AList分支"
+    en:
+        name: "OpenList"
+        description: "A new AList Fork to Anti Trust Crisis"
