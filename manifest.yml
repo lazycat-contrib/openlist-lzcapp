@@ -37,10 +37,10 @@ ext_config:
 locales:
     zh:
         name: "OpenList"
-        description: "反垄断危机的新AList分支"
+        description: "🗂一个支持多存储的文件列表程序，使用 Gin 和 Solidjs，基于 alist 项目 fork 开发"
     zh_CN:
         name: "OpenList"
-        description: "反垄断危机的新AList分支"
+        description: "🗂一个支持多存储的文件列表程序，使用 Gin 和 Solidjs，基于 alist 项目 fork 开发"
     en:
         name: "OpenList"
         description: "A new AList Fork to Anti Trust Crisis"
