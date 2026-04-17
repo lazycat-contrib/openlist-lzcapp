@@ -1,0 +1,28 @@
+application:
+  subdomain: openlist
+  background_task: true
+{{if .U.multi_instance}}
+  multi_instance: true
+{{end}}
+  public_path:
+    - /
+
+  upstreams:
+    - location: /
+      backend: http://openlist:5244/
+
+services:
+  openlist:
+    # openlistteam/openlist:v4.2.1-aio
+    image: registry.lazycat.cloud/czyt/openlistteam/openlist:a7fb241a62ed564a
+    user: root
+    environment:
+      - UMASK=022
+      - OPENLIST_ADMIN_PASSWORD={{.U.openlistinitpass}}
+      - TZ=UTC
+    binds:
+      - /lzcapp/var/data:/opt/openlist/data
+
+ext_config:
+  enable_document_access: true
+  enable_media_access: true

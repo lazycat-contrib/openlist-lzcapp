@@ -6,7 +6,7 @@
 #buildscript: sh build.sh
 
 # manifest: 指定 lpk 包的 manifest.yml 文件路径
-manifest: ./manifest.yml
+manifest: ./lzc-manifest.yml
 
 # contentdir: 指定打包的内容，将会打包到 lpk 中
 #contentdir: ./dist

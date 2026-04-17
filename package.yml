@@ -1,0 +1,18 @@
+package: lazycat.community.app.openlist
+version: 4.2.1
+name: OpenList
+description: A new AList Fork to Anti Trust Crisis
+min_os_version: 1.5.0
+homepage: https://github.com/OpenListTeam/OpenList
+author: OpenListTeam
+
+locales:
+  zh:
+    name: "OpenList"
+    description: "🗂一个支持多存储的文件列表程序，使用 Gin 和 Solidjs，基于 alist 项目 fork 开发"
+  zh_CN:
+    name: "OpenList"
+    description: "🗂一个支持多存储的文件列表程序，使用 Gin 和 Solidjs，基于 alist 项目 fork 开发"
+  en:
+    name: "OpenList"
+    description: "A new AList Fork to Anti Trust Crisis"
