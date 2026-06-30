@@ -1,0 +1,5 @@
+# LPK build artifacts
+*.lpk
+
+# LazyCat release helper state
+.lazycat-release.env
