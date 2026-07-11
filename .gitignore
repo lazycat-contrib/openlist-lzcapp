@@ -3,3 +3,5 @@
 
 # LazyCat release helper state
 .lazycat-release.env
+dist/
+.lazycat-action/

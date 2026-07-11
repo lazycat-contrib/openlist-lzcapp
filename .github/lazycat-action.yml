@@ -1,0 +1,47 @@
+version: 1
+
+project:
+  root: .
+  build_config: lzc-build.yml
+  package_file: package.yml
+  output: dist/openlist.lpk
+
+update:
+  strategy: publish
+  allow_downgrade: false
+  version_source:
+    type: image
+    image: openlist
+
+build:
+  run_buildscript: false
+
+images:
+  - id: openlist
+    target: service
+    service: openlist
+    source: openlistteam/openlist
+    channel: custom
+    sort: semver
+    tag_regex: '^v?[0-9]+\.[0-9]+\.[0-9]+-aio$'
+    version_regex: '^v?(?P<version>[0-9]+\.[0-9]+\.[0-9]+)-aio$'
+    version_template: '{version}'
+    delivery:
+      mode: lazycat
+
+stores:
+  official:
+    enabled: true
+    skip_if_version_exists: true
+    create_if_missing: true
+    changelog_locales: [zh, en]
+    application:
+      language: zh
+      name: OpenList
+      source: https://github.com/OpenListTeam/OpenList
+      source_author: OpenListTeam
+  private:
+    enabled: true
+    skip_if_version_exists: true
+    name: OpenList
+    summary: 支持多存储的自托管文件列表程序
