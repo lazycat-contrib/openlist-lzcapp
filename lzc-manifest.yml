@@ -6,15 +6,14 @@ application:
 {{end}}
   public_path:
     - /
-
   upstreams:
     - location: /
       backend: http://openlist:5244/
-
 services:
   openlist:
     # openlistteam/openlist:v4.2.1-aio
-    image: registry.lazycat.cloud/czyt/openlistteam/openlist:09fbca25749b284c
+    # upstream: openlistteam/openlist:v4.2.3-aio
+    image: registry.lazycat.cloud/czyt/openlistteam/openlist:170908ec57d76718
     user: root
     environment:
       - UMASK=022
@@ -22,7 +21,6 @@ services:
       - TZ=UTC
     binds:
       - /lzcapp/var/data:/opt/openlist/data
-
 ext_config:
   enable_document_access: true
   enable_media_access: true
