@@ -1,6 +1,6 @@
 package: lazycat.community.app.openlist
 license: AGPL-3.0
-version: 4.2.6
+version: 4.2.7
 name: OpenList
 description: A new AList Fork to Anti Trust Crisis
 min_os_version: 1.5.0

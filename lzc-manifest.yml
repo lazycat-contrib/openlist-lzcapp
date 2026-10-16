@@ -12,8 +12,8 @@ application:
 services:
   openlist:
     # openlistteam/openlist:v4.2.1-aio
-    # upstream: openlistteam/openlist:v4.2.6-aio
-    image: registry.lazycat.cloud/czyt/openlistteam/openlist:989869bc8beea84a
+    # upstream: openlistteam/openlist:v4.2.7-aio
+    image: registry.lazycat.cloud/czyt/openlistteam/openlist:97764acc9b1f612f
     user: root
     environment:
       - UMASK=022
